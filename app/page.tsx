@@ -55,8 +55,8 @@ export default function Home() {
       <img className="avatar" src="/taiyo.jpg" alt="水野太陽のアイコン"/>
       <div className="hero-content">
         <p className="role">STUDENT CREATOR · NARA, JAPAN</p>
-        <h1>水野 太陽</h1>
-        <p className="hero-en">TAIYO MIZUNO</p>
+        <h1 className="hero-en-title">TAIYO MIZUNO</h1>
+        <p className="hero-jp-name">水野 太陽</p>
         <p className="hero-copy">身の回りの不便を見つけ、Web・AI・プロダクトで解決する学生クリエイター。<br/>つくるだけで終わらせず、使われるところまで届けます。</p>
         <div className="hero-actions"><a className="button primary" href="#achievements">実績を見る</a><a className="button secondary" href="mailto:mizuno.taiyo.sub@gmail.com"><Mail size={16}/> 仕事を相談する</a></div>
       </div>
