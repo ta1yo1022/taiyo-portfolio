@@ -37,7 +37,7 @@ const media = [
   ['SDGs探究Library', 'Interview', 'https://sdgs-awards.umedai.jp/library/2025/11/06/interview-nara-wu-secondary-school/', '/media-sdgs.jpg', '奈良女子大学附属中等教育学校 水野太陽さん 技術で繋ぐ地域の輪。「みまもりコンパス」で認知症徘徊問題に挑む中学生エンジニアの挑戦'],
 ];
 
-const shell = 'mx-auto w-[calc(100%_-_40px)] max-w-[1080px] max-md:w-[calc(100%_-_28px)]';
+const shell = 'mx-auto w-[calc(100%_-_40px)] max-w-[1080px]';
 const label = 'text-[11px] tracking-[.08em] text-neutral-500';
 const pill = 'inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition-colors';
 
@@ -84,7 +84,7 @@ export default function Home() {
 
 
     <section className={`${shell} pt-8 pb-24 max-md:py-[74px]`}>
-      <SectionTitle eyebrow="MEDIA">メディア</SectionTitle>
+      <SectionTitle eyebrow="MEDIA" description="これまでのメディア掲載">メディア</SectionTitle>
       <div className="grid grid-cols-2 gap-3.5 max-md:grid-cols-1">{media.map(([title, type, url, image, copy]) => <a className="group relative flex min-h-[380px] items-end overflow-hidden rounded-xl bg-neutral-950 text-white shadow-[0_1px_1px_rgba(0,0,0,.1),0_2px_2px_rgba(0,0,0,.1),0_4px_4px_rgba(0,0,0,.1),0_8px_8px_rgba(0,0,0,.1),0_16px_16px_rgba(0,0,0,.1)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-950 max-md:min-h-[360px]" href={url} target="_blank" rel="noreferrer" key={title}>
         <img className="absolute inset-x-0 top-0 h-[110%] w-full object-cover transition-transform duration-700 ease-[cubic-bezier(.19,1,.22,1)] group-hover:-translate-y-[4%] group-focus-visible:-translate-y-[4%] motion-reduce:transition-none" src={image} alt="" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/90" />
