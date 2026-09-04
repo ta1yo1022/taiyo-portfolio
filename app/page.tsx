@@ -56,6 +56,7 @@ export default function Home() {
       <div className="min-w-0 max-md:contents">
         <h1 className="my-3 text-[clamp(3.4rem,7vw,5.4rem)] leading-none font-bold tracking-[-.055em] max-md:col-start-2 max-md:m-0 max-md:text-[clamp(2.25rem,10vw,3.2rem)]">水野太陽</h1>
         <p className="m-0 text-[clamp(1.25rem,2vw,1.7rem)] font-semibold tracking-[.05em] max-md:col-start-2 max-md:text-[1.05rem]">TAIYO MIZUNO</p>
+        <p className="mt-1 text-sm font-medium text-neutral-500 max-md:col-start-2">15y.o.</p>
         <p className="mt-8 max-w-[620px] text-base leading-[1.9] text-neutral-600 max-md:col-span-full max-md:mt-5">WEBアプリ開発が好きです。たまにESP32とかArduinoを使ったりもします。</p>
         <div className="mt-5 flex items-center gap-3 max-md:col-span-full">
           <a className="inline-flex transition-opacity hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-950" href="https://x.com/ta1yo1022" target="_blank" rel="noreferrer" aria-label="Xのta1yo1022ページを開く">
@@ -66,6 +67,7 @@ export default function Home() {
           </a>
           <span className="ml-1 text-xs font-medium text-neutral-500">@ta1yo1022</span>
         </div>
+        <a className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-950 max-md:col-span-full" href="mailto:taiyo@volta.jp"><Mail size={16} />taiyo@volta.jp</a>
       </div>
     </section>
 
