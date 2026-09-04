@@ -34,8 +34,8 @@ const projects = [
 ];
 
 const media = [
-  ['セトフラ', 'YouTube', 'https://youtu.be/ehUx2IxKy2Q?si=3tnm_5b3X2_F9IQS', '/media-setofura.png'],
-  ['SDGs探究Library', 'Interview', 'https://sdgs-awards.umedai.jp/library/2025/11/06/interview-nara-wu-secondary-school/', '/media-sdgs.jpg'],
+  ['セトフラ', 'YouTube', 'https://youtu.be/ehUx2IxKy2Q?si=3tnm_5b3X2_F9IQS', '/media-setofura.png', '「ORENGE AI」参加者から2人目のゲスト　奈良女子大学附属中3年生のエンジニア　水野太陽'],
+  ['SDGs探究Library', 'Interview', 'https://sdgs-awards.umedai.jp/library/2025/11/06/interview-nara-wu-secondary-school/', '/media-sdgs.jpg', '奈良女子大学附属中等教育学校 水野太陽さん 技術で繋ぐ地域の輪。「みまもりコンパス」で認知症徘徊問題に挑む中学生エンジニアの挑戦'],
 ];
 
 const shell = 'mx-auto w-[calc(100%_-_40px)] max-w-[1080px] max-md:w-[calc(100%_-_28px)]';
@@ -83,9 +83,17 @@ export default function Home() {
 
     <section className={`${shell} pt-8 pb-24 max-md:py-[74px]`}>
       <SectionTitle eyebrow="MEDIA">メディア</SectionTitle>
-      <div className="grid grid-cols-2 gap-3.5 max-md:grid-cols-1">{media.map(([title, type, url, image]) => <a className="group overflow-hidden rounded-xl border border-neutral-200 bg-white transition duration-200 hover:-translate-y-[3px] hover:shadow-[0_14px_38px_rgba(0,0,0,.07)] motion-reduce:transition-none" href={url} target="_blank" rel="noreferrer" key={title}>
-        <div className="aspect-video overflow-hidden bg-neutral-100"><img className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transition-none" src={image} alt={`${title}の掲載画像`} /></div>
-        <div className="flex items-center justify-between gap-5 p-5"><div><span className="mb-1.5 block text-xs text-neutral-500">{type}</span><strong className="text-base">{title}</strong></div><ArrowUpRight className="shrink-0" size={18} /></div>
+      <div className="grid grid-cols-2 gap-3.5 max-md:grid-cols-1">{media.map(([title, type, url, image, copy]) => <a className="group relative flex min-h-[380px] items-end overflow-hidden rounded-xl bg-neutral-950 text-white shadow-[0_1px_1px_rgba(0,0,0,.1),0_2px_2px_rgba(0,0,0,.1),0_4px_4px_rgba(0,0,0,.1),0_8px_8px_rgba(0,0,0,.1),0_16px_16px_rgba(0,0,0,.1)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-950 max-md:min-h-[360px]" href={url} target="_blank" rel="noreferrer" key={title}>
+        <img className="absolute inset-x-0 top-0 h-[110%] w-full object-cover transition-transform duration-700 ease-[cubic-bezier(.19,1,.22,1)] group-hover:-translate-y-[4%] group-focus-visible:-translate-y-[4%] motion-reduce:transition-none" src={image} alt="" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/90" />
+        <div className="relative z-10 w-full p-6 text-left">
+          <span className="mb-2 block text-[11px] font-semibold tracking-[.12em] text-white/70 uppercase">{type}</span>
+          <h3 className="text-xl leading-snug font-bold tracking-[-.025em]">{title}</h3>
+          <div className="grid grid-rows-[1fr] translate-y-0 opacity-100 transition-all duration-700 ease-[cubic-bezier(.19,1,.22,1)] md:grid-rows-[0fr] md:translate-y-4 md:opacity-0 md:group-hover:grid-rows-[1fr] md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-visible:grid-rows-[1fr] md:group-focus-visible:translate-y-0 md:group-focus-visible:opacity-100 motion-reduce:transition-none"><div className="overflow-hidden">
+            <p className="mt-4 text-sm leading-[1.75] text-white/85">{copy}</p>
+            <span className="mt-5 inline-flex items-center gap-2 bg-white px-4 py-2.5 text-xs font-bold tracking-[.04em] text-neutral-950">詳しく見る<ArrowUpRight size={15} /></span>
+          </div></div>
+        </div>
       </a>)}</div>
     </section>
 
