@@ -61,11 +61,11 @@ export default function Home() {
         <p className="m-0 text-[clamp(1.25rem,2vw,1.7rem)] font-semibold tracking-[.05em] max-md:col-start-2 max-md:text-[1.05rem]">TAIYO MIZUNO</p>
         <p className="mt-8 max-w-[620px] text-base leading-[1.9] text-neutral-600 max-md:col-span-full max-md:mt-5">WEBアプリ開発が好きです。たまにESP32とかArduinoを使ったりもします。</p>
         <div className="mt-5 flex items-center gap-3 max-md:col-span-full">
-          <a className="grid size-11 place-items-center rounded-full bg-neutral-950 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950 motion-reduce:transition-none" href="https://x.com/ta1yo1022" target="_blank" rel="noreferrer" aria-label="Xのta1yo1022ページを開く">
-            <img className="size-[17px]" src="/x.svg" alt="" />
+          <a className="inline-flex transition-opacity hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-950" href="https://x.com/ta1yo1022" target="_blank" rel="noreferrer" aria-label="Xのta1yo1022ページを開く">
+            <img className="size-5 invert" src="/x.svg" alt="" />
           </a>
-          <a className="grid size-11 place-items-center rounded-full border border-neutral-200 bg-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950 motion-reduce:transition-none" href="https://www.instagram.com/ta1yo1022/" target="_blank" rel="noreferrer" aria-label="Instagramのta1yo1022ページを開く">
-            <img className="size-5" src="/instagram.svg" alt="" />
+          <a className="inline-flex transition-opacity hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-950" href="https://www.instagram.com/ta1yo1022/" target="_blank" rel="noreferrer" aria-label="Instagramのta1yo1022ページを開く">
+            <img className="size-[22px]" src="/instagram.svg" alt="" />
           </a>
           <span className="ml-1 text-xs font-medium text-neutral-500">@ta1yo1022</span>
         </div>
