@@ -53,13 +53,22 @@ function SectionTitle({ eyebrow, children, description }: { eyebrow: string; chi
 
 export default function Home() {
   return <main id="top" className="bg-white text-neutral-950">
-    <section className={`${shell} grid grid-cols-[minmax(220px,310px)_minmax(0,1fr)] items-center gap-[clamp(52px,8vw,110px)] px-[7vw] pt-[108px] pb-[116px] max-md:grid-cols-[116px_minmax(0,1fr)] max-md:items-start max-md:gap-x-6 max-md:gap-y-2.5 max-md:px-2.5 max-md:pt-[70px] max-md:pb-[84px]`}>
+    <section className={`${shell} grid grid-cols-[minmax(220px,310px)_minmax(0,1fr)] items-center gap-[clamp(52px,8vw,110px)] pt-[108px] pb-[116px] max-md:grid-cols-[116px_minmax(0,1fr)] max-md:items-start max-md:gap-x-6 max-md:gap-y-2.5 max-md:pt-[70px] max-md:pb-[84px]`}>
       <img className="aspect-square w-full max-w-[310px] rounded-full border border-neutral-200 bg-neutral-100 object-cover max-md:row-span-3 max-md:w-[116px]" src="/taiyo.jpg" alt="水野太陽のアイコン"/>
       <div className="min-w-0 max-md:contents">
         <p className={`${label} m-0 max-md:col-start-2 max-md:self-end`}>CREATOR</p>
         <h1 className="my-3 text-[clamp(3.4rem,7vw,5.4rem)] leading-none font-bold tracking-[-.055em] max-md:col-start-2 max-md:m-0 max-md:text-[clamp(2.25rem,10vw,3.2rem)]">水野太陽</h1>
         <p className="m-0 text-[clamp(1.25rem,2vw,1.7rem)] font-semibold tracking-[.05em] max-md:col-start-2 max-md:text-[1.05rem]">TAIYO MIZUNO</p>
         <p className="mt-8 max-w-[620px] text-base leading-[1.9] text-neutral-600 max-md:col-span-full max-md:mt-5">WEBアプリ開発が好きです。たまにESP32とかArduinoを使ったりもします。</p>
+        <div className="mt-5 flex items-center gap-3 max-md:col-span-full">
+          <a className="grid size-11 place-items-center rounded-full bg-neutral-950 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950 motion-reduce:transition-none" href="https://x.com/ta1yo1022" target="_blank" rel="noreferrer" aria-label="Xのta1yo1022ページを開く">
+            <img className="size-[17px]" src="/x.svg" alt="" />
+          </a>
+          <a className="grid size-11 place-items-center rounded-full border border-neutral-200 bg-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950 motion-reduce:transition-none" href="https://www.instagram.com/ta1yo1022/" target="_blank" rel="noreferrer" aria-label="Instagramのta1yo1022ページを開く">
+            <img className="size-5" src="/instagram.svg" alt="" />
+          </a>
+          <span className="ml-1 text-xs font-medium text-neutral-500">@ta1yo1022</span>
+        </div>
       </div>
     </section>
 
