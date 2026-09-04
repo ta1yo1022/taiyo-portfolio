@@ -2,7 +2,7 @@ import { ArrowUpRight, BrainCircuit, Code2, Mail, PanelsTopLeft } from 'lucide-r
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const achievements = [
-  { year: '2026', title: '自由すぎる研究EXPO2026', result: '入選', image: '/contests/OGPバナー1200×630-1.png' },
+  { year: '2026', title: '自由すぎる研究EXPO2026', result: '入選', image: '/contests/free-research-expo.png' },
   { year: '2025', title: 'U-22プログラミング・コンテスト', result: '経済産業省商務情報政策局長賞（テクノロジー部門）／ピーエスシー賞／PCAクラウド賞', image: '/contests/images (5).jpeg' },
   { year: '2025', title: 'アプリ甲子園', result: 'ファイナリスト', image: '/contests/maxresdefault (1).jpg' },
   { year: '2025', title: 'IPA セキュリティ・キャンプ', result: 'ジュニア採択', image: '/contests/security-camp_logo.jpg' },
