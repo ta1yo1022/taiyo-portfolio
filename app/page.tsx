@@ -2,23 +2,22 @@ import { ArrowUpRight, BrainCircuit, Code2, Mail, PanelsTopLeft } from 'lucide-r
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const achievements = [
-  ['2026', '自由すぎる研究EXPO2026', '入選'],
-  ['2025', 'U-22プログラミング・コンテスト', '経済産業省商務情報政策局長賞（テクノロジー部門）／ピーエスシー賞／PCAクラウド賞'],
-  ['2025', 'アプリ甲子園', 'ファイナリスト'],
-  ['2025', 'IPA セキュリティ・キャンプ', 'ジュニア採択'],
-  ['2025', 'AKATSUKIプロジェクト ORANGE AI', '採択'],
-  ['2025', 'サイエンスキャッスルジャパン', '優秀ポスター賞'],
-  ['2025', 'OPAプログラミングコンテスト', '優秀賞'],
-  ['2025', 'ライフイズテック レッスンコンテスト 夏の部', '優秀賞'],
-  ['2025', '奈良県児童・生徒発明くふう展', 'NHK奈良放送局長賞'],
-  ['2025', '全日本学生児童発明くふう展', '入選'],
-  ['2025', '中学生「税についての作文」', '奈良県納税貯蓄組合総連合会 会長賞'],
-  ['2025', '一条杯 奈良県中学校英語レシテーションコンテスト', '4位'],
-  ['2025', 'グローバルサイエンティストアワード「夢の翼」', '奨励賞'],
-  ['2025', 'ライフイズテックコンテスト', '身の回りの問題解決部門 優秀賞'],
-  ['2024', '未踏ジュニア', '採択／スーパークリエータ認定'],
-  ['2024', 'WIPO Show and Tell プレゼンテーションコンテスト', 'ファイナリスト'],
-  ['2024', 'SDGs探究AWARDS', '企画・アイデア部門 優秀賞'],
+  { year: '2026', title: '自由すぎる研究EXPO2026', result: '入選', image: '/contests/OGPバナー1200×630-1.png' },
+  { year: '2025', title: 'U-22プログラミング・コンテスト', result: '経済産業省商務情報政策局長賞（テクノロジー部門）／ピーエスシー賞／PCAクラウド賞', image: '/contests/images (5).jpeg' },
+  { year: '2025', title: 'アプリ甲子園', result: 'ファイナリスト', image: '/contests/maxresdefault (1).jpg' },
+  { year: '2025', title: 'IPA セキュリティ・キャンプ', result: 'ジュニア採択', image: '/contests/security-camp_logo.jpg' },
+  { year: '2025', title: 'AKATSUKIプロジェクト ORANGE AI', result: '採択', image: '/contests/images (6).jpeg' },
+  { year: '2025', title: 'サイエンスキャッスルジャパン', result: '優秀ポスター賞', image: '/contests/pic_250513_Science_01.jpg' },
+  { year: '2025', title: 'OPAプログラミングコンテスト', result: '優秀賞', image: '/contests/images.png' },
+  { year: '2025', title: 'ライフイズテック レッスンコンテスト 夏の部', result: '優秀賞', image: '/contests/c1f954c0-7855-4ab6-a9a7-1d0c9b2a6b80.png' },
+  { year: '2025', title: '奈良県児童・生徒発明くふう展', result: 'NHK奈良放送局長賞', image: '/contests/IMG_1138-1200x900.jpg' },
+  { year: '2025', title: '全日本学生児童発明くふう展', result: '入選' },
+  { year: '2025', title: '中学生「税についての作文」', result: '奈良県納税貯蓄組合総連合会 会長賞' },
+  { year: '2025', title: '一条杯 奈良県中学校英語レシテーションコンテスト', result: '4位' },
+  { year: '2025', title: 'グローバルサイエンティストアワード「夢の翼」', result: '奨励賞', image: '/contests/images (7).jpeg' },
+  { year: '2024', title: '未踏ジュニア', result: '採択／スーパークリエータ認定', image: '/contests/images (8).jpeg' },
+  { year: '2024', title: 'WIPO Show and Tell プレゼンテーションコンテスト', result: 'ファイナリスト', image: '/contests/hr-kyujin-top.png' },
+  { year: '2024', title: 'SDGs探究AWARDS', result: '企画・アイデア部門 優秀賞', image: '/contests/images (1).png' },
 ];
 
 const work = [
@@ -73,9 +72,13 @@ export default function Home() {
     <section className={`${shell} py-24 max-md:py-[74px]`} id="achievements">
       <SectionTitle eyebrow="ACHIEVEMENTS" description="これまでの主な受賞・採択実績">実績</SectionTitle>
       <div className="grid grid-cols-3 gap-3.5 max-md:grid-cols-1">
-        {achievements.map(([year, title, result], index) => <Card className={`min-h-[180px] border-0 bg-white text-neutral-950 shadow-none ring-1 ring-black/10 transition duration-200 motion-reduce:transition-none hover:-translate-y-[3px] hover:shadow-[0_14px_38px_rgba(0,0,0,.07)] max-md:min-h-40 ${index < 3 ? 'bg-neutral-950 text-white ring-neutral-950' : ''}`} key={`${title}-${result}`}>
-          <CardHeader className="gap-5"><span className={`${label} ${index < 3 ? 'text-neutral-400' : ''}`}>{year}</span><CardTitle className="text-[17px] leading-normal tracking-[-.02em]">{title}</CardTitle></CardHeader>
-          <CardContent className="mt-auto"><p className={`m-0 text-[13px] leading-relaxed ${index < 3 ? 'text-neutral-400' : 'text-neutral-600'}`}>{result}</p></CardContent>
+        {achievements.map(({ year, title, result, image }) => <Card className="min-h-[330px] overflow-hidden border-0 bg-white py-0 text-neutral-950 shadow-none ring-1 ring-black/10 transition duration-200 motion-reduce:transition-none hover:-translate-y-[3px] hover:shadow-[0_14px_38px_rgba(0,0,0,.07)] max-md:min-h-0" key={`${title}-${result}`}>
+          <div className="relative aspect-video overflow-hidden bg-neutral-100">
+            {image ? <img className="size-full object-cover" src={image} alt={`${title}の画像`} /> : <div className="grid size-full place-items-center text-xs font-semibold tracking-[.16em] text-neutral-400">NO IMAGE</div>}
+            <span className="absolute top-3 left-3 rounded-full bg-white/95 px-3 py-1.5 text-[11px] font-semibold tracking-[.08em] text-neutral-700 shadow-sm">{year}</span>
+          </div>
+          <CardHeader className="gap-0 pt-5"><CardTitle className="text-[17px] leading-normal tracking-[-.02em]">{title}</CardTitle></CardHeader>
+          <CardContent className="mt-auto pb-5"><p className="m-0 text-[13px] leading-relaxed text-neutral-600">{result}</p></CardContent>
         </Card>)}
       </div>
     </section>
@@ -96,13 +99,5 @@ export default function Home() {
         </div>
       </a>)}</div>
     </section>
-
-    <section className="bg-neutral-100 py-24 max-md:py-[74px]" id="skills"><div className={shell}>
-      <SectionTitle eyebrow="WHAT I DO" description="制作・開発のご相談を受け付けています">できること</SectionTitle>
-      <div className="grid grid-cols-3 gap-3.5 max-md:grid-cols-1">{work.map(({icon: Icon,title,text}) => <Card className="min-h-[250px] border-0 bg-white text-neutral-950 shadow-none ring-1 ring-black/10 max-md:min-h-[220px]" key={title}>
-        <CardHeader className="gap-[18px]"><div className="grid size-11 place-items-center rounded-full bg-neutral-950 text-white"><Icon size={22}/></div><CardTitle className="mt-5 text-xl tracking-[-.025em]">{title}</CardTitle><CardDescription className="leading-[1.8] text-neutral-600">{text}</CardDescription></CardHeader>
-      </Card>)}</div>
-      <div className="mt-8 flex flex-wrap justify-center gap-2">{['Web Development','App Development','AI / ML','Product Design','Prototyping','Presentation','Project Leadership'].map(tag=><span className="rounded-full border border-neutral-200 bg-white px-3.5 py-2 text-xs" key={tag}>{tag}</span>)}</div>
-    </div></section>
   </main>;
 }
