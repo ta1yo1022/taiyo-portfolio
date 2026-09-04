@@ -75,9 +75,8 @@ export default function Home() {
         {achievements.map(({ year, title, result, image }) => <Card className="min-h-[330px] overflow-hidden border-0 bg-white py-0 text-neutral-950 shadow-none ring-1 ring-black/10 transition duration-200 motion-reduce:transition-none hover:-translate-y-[3px] hover:shadow-[0_14px_38px_rgba(0,0,0,.07)] max-md:min-h-0" key={`${title}-${result}`}>
           <div className="relative aspect-video overflow-hidden bg-neutral-100">
             {image ? <img className="size-full object-cover" src={image} alt={`${title}の画像`} /> : <div className="grid size-full place-items-center text-xs font-semibold tracking-[.16em] text-neutral-400">NO IMAGE</div>}
-            <span className="absolute top-3 left-3 rounded-full bg-white/95 px-3 py-1.5 text-[11px] font-semibold tracking-[.08em] text-neutral-700 shadow-sm">{year}</span>
           </div>
-          <CardHeader className="gap-0 pt-5"><CardTitle className="text-[17px] leading-normal tracking-[-.02em]">{title}</CardTitle></CardHeader>
+          <CardHeader className="gap-2 pt-5"><span className="text-[11px] font-semibold tracking-[.08em] text-neutral-500">{year}年</span><CardTitle className="text-[17px] leading-normal tracking-[-.02em]">{title}</CardTitle></CardHeader>
           <CardContent className="mt-auto pb-5"><p className="m-0 text-[13px] leading-relaxed text-neutral-600">{result}</p></CardContent>
         </Card>)}
       </div>
