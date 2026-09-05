@@ -45,6 +45,8 @@ const history = [
   ['2025年10月', '個人事業「Volta Technologies」を立ち上げ'],
 ];
 
+const skills = ['TypeScript', 'HTML / CSS', 'Next.js', 'Remix'];
+
 const shell = 'mx-auto w-[calc(100%_-_40px)] max-w-[1080px]';
 const label = 'text-[11px] tracking-[.08em] text-neutral-500';
 const pill = 'inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition-colors';
@@ -79,7 +81,14 @@ export default function Home() {
       </div>
     </section>
 
-    <section className={`${shell} py-24 max-md:py-[74px]`} id="achievements">
+    <section className={`${shell} pt-8 pb-20 max-md:pt-6 max-md:pb-16`} id="skills">
+      <SectionTitle eyebrow="SKILLS">スキル</SectionTitle>
+      <div className="grid grid-cols-4 gap-3.5 max-md:grid-cols-2">
+        {skills.map((skill) => <div className="flex min-h-28 items-end rounded-xl border border-neutral-200 bg-white p-5 text-lg font-bold tracking-[-.025em] max-md:min-h-24 max-md:p-4 max-md:text-base" key={skill}>{skill}</div>)}
+      </div>
+    </section>
+
+    <section className={`${shell} pt-12 pb-24 max-md:pt-12 max-md:pb-[74px]`} id="achievements">
       <SectionTitle eyebrow="ACHIEVEMENTS" description="これまでの主な受賞・採択実績">実績</SectionTitle>
       <div className="grid grid-cols-3 gap-3.5 max-md:grid-cols-1">
         {achievements.map(({ year, title, result, image }) => <Card className="min-h-[330px] overflow-hidden border-0 bg-white py-0 text-neutral-950 shadow-none ring-1 ring-black/10 transition duration-200 motion-reduce:transition-none hover:-translate-y-[3px] hover:shadow-[0_14px_38px_rgba(0,0,0,.07)] max-md:min-h-0" key={`${title}-${result}`}>
