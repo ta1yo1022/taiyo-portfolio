@@ -88,7 +88,7 @@ export default function Home() {
     </section>
 
     <section className={`${shell} pt-8 pb-20 max-md:pt-6 max-md:pb-16`} id="skills">
-      <SectionTitle eyebrow="SKILLS">スキル</SectionTitle>
+      <SectionTitle eyebrow="SKILLS" description="使用している主な技術">スキル</SectionTitle>
       <div className="grid grid-cols-5 gap-3.5 max-md:grid-cols-2">
         {skills.map(({ name, image, dark }) => <div className="flex min-h-[190px] flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white" key={name}>
           <div className={`grid flex-1 place-items-center p-6 ${dark ? 'bg-neutral-950' : 'bg-neutral-50'}`}>
@@ -130,7 +130,7 @@ export default function Home() {
     </section>
 
     <section className={`${shell} pt-8 pb-24 max-md:py-[74px]`} id="history">
-      <SectionTitle eyebrow="HISTORY">経歴</SectionTitle>
+      <SectionTitle eyebrow="HISTORY" description="これまでの主な歩み">経歴</SectionTitle>
       <div className="border-t border-neutral-200">
         {history.map(([date, event]) => <div className="grid grid-cols-[150px_minmax(0,1fr)] gap-8 border-b border-neutral-200 py-6 max-md:grid-cols-1 max-md:gap-2 max-md:py-5" key={`${date}-${event}`}>
           <time className="text-sm font-medium text-neutral-500">{date}</time>
