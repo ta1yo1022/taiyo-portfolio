@@ -38,6 +38,13 @@ const media = [
   ['SDGs探究Library', 'Interview', 'https://sdgs-awards.umedai.jp/library/2025/11/06/interview-nara-wu-secondary-school/', '/media-sdgs.jpg', '奈良女子大学附属中等教育学校 水野太陽さん 技術で繋ぐ地域の輪。「みまもりコンパス」で認知症徘徊問題に挑む中学生エンジニアの挑戦'],
 ];
 
+const history = [
+  ['2010年10月', '出生'],
+  ['2024年5月', '未踏ジュニア 採択'],
+  ['2025年8月', 'AKATSUKIプロジェクト ORANGE AI 採択'],
+  ['2025年10月', '個人事業「Volta Technologies」を立ち上げ'],
+];
+
 const shell = 'mx-auto w-[calc(100%_-_40px)] max-w-[1080px]';
 const label = 'text-[11px] tracking-[.08em] text-neutral-500';
 const pill = 'inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition-colors';
@@ -100,6 +107,16 @@ export default function Home() {
           </div></div>
         </div>
       </a>)}</div>
+    </section>
+
+    <section className={`${shell} pt-8 pb-24 max-md:py-[74px]`} id="history">
+      <SectionTitle eyebrow="HISTORY">経歴</SectionTitle>
+      <div className="border-t border-neutral-200">
+        {history.map(([date, event]) => <div className="grid grid-cols-[150px_minmax(0,1fr)] gap-8 border-b border-neutral-200 py-6 max-md:grid-cols-1 max-md:gap-2 max-md:py-5" key={`${date}-${event}`}>
+          <time className="text-sm font-medium text-neutral-500">{date}</time>
+          <p className="m-0 text-base leading-relaxed font-semibold tracking-[-.015em]">{event}</p>
+        </div>)}
+      </div>
     </section>
   </main>;
 }
