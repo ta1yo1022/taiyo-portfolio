@@ -45,7 +45,13 @@ const history = [
   ['2025年10月', '個人事業「Volta Technologies」を立ち上げ'],
 ];
 
-const skills = ['TypeScript', 'HTML / CSS', 'Next.js', 'Remix'];
+const skills = [
+  { name: 'TypeScript', image: '/skills/typescript.png' },
+  { name: 'HTML', image: '/skills/html.png' },
+  { name: 'CSS', image: '/skills/css.png' },
+  { name: 'Next.js', image: '/skills/nextjs.png', dark: true },
+  { name: 'Remix', image: '/skills/remix.png', dark: true },
+];
 
 const shell = 'mx-auto w-[calc(100%_-_40px)] max-w-[1080px]';
 const label = 'text-[11px] tracking-[.08em] text-neutral-500';
@@ -83,8 +89,13 @@ export default function Home() {
 
     <section className={`${shell} pt-8 pb-20 max-md:pt-6 max-md:pb-16`} id="skills">
       <SectionTitle eyebrow="SKILLS">スキル</SectionTitle>
-      <div className="grid grid-cols-4 gap-3.5 max-md:grid-cols-2">
-        {skills.map((skill) => <div className="flex min-h-28 items-end rounded-xl border border-neutral-200 bg-white p-5 text-lg font-bold tracking-[-.025em] max-md:min-h-24 max-md:p-4 max-md:text-base" key={skill}>{skill}</div>)}
+      <div className="grid grid-cols-5 gap-3.5 max-md:grid-cols-2">
+        {skills.map(({ name, image, dark }) => <div className="flex min-h-[190px] flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white" key={name}>
+          <div className={`grid flex-1 place-items-center p-6 ${dark ? 'bg-neutral-950' : 'bg-neutral-50'}`}>
+            <img className="h-20 w-full object-contain" src={image} alt={`${name}のロゴ`} />
+          </div>
+          <p className="m-0 p-4 text-base font-bold tracking-[-.025em]">{name}</p>
+        </div>)}
       </div>
     </section>
 
